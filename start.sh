@@ -10,8 +10,8 @@ ngrok http 8006 &
 sleep 5
 
 
-userid=''
-tokenid=''
+userid='624300941042253824'
+tokenid='ZyGgD9CPuxcJEAy4Z94paDy5BOH0XYBs'
 
 # Capturar a URL gerada pelo ngrok
 ngrok_url=$(curl -s http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
