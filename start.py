@@ -24,6 +24,7 @@ ngrok_url = requests.get("http://localhost:4040/api/tunnels").json()["tunnels"][
 
 
 
+client = discord.Client()
 
 @client.event
 async def on_ready():
