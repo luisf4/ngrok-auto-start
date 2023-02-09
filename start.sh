@@ -11,7 +11,7 @@ sleep 5
 
 
 userid='624300941042253824'
-tokenid='ZyGgD9CPuxcJEAy4Z94paDy5BOH0XYBs'
+tokenid='MTA3MjI1NjAzNTg4MjAxMjY5Mw.Gm9r6c.mkQD8BT8AucTrsULuGby398tlfMb6EUq_LYWTY'
 
 # Capturar a URL gerada pelo ngrok
 ngrok_url=$(curl -s http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
