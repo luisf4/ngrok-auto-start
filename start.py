@@ -12,7 +12,7 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 USER_ID = os.getenv("USER_ID")
 
 # Start ngrok on port 8006
-os.system("ngrok http 8006 &")
+os.system("/root/ngrok http 8006 &")
 time.sleep(5)
 
 # Get the ngrok URL
