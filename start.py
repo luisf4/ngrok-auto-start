@@ -32,7 +32,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    await message.USER_ID.send(ngrok_url)
+    await message.user.send(ngrok_url)
     if message.author == client.user:
         return
 
