@@ -3,6 +3,8 @@ import requests
 import subprocess
 import time
 from dotenv import load_dotenv
+import discord
+
 
 load_dotenv()
 
@@ -19,16 +21,21 @@ time.sleep(5)
 ngrok_url = requests.get("http://localhost:4040/api/tunnels").json()["tunnels"][0]["public_url"]
 
 # Send the ngrok URL as a Direct Message to the specified user
-requests.post(
-    f"https://discordapp.com/api/v6/users/{USER_ID}/channels",
-    headers={
-        "Authorization": f"Bot {BOT_TOKEN}",
-        "User-Agent": "BotDiscord (https://github.com/Gilbert7, 0.1)",
-        "Content-Type": "application/json"
-    },
-    json={
-        "content": f"ngrok URL: {ngrok_url}",
-        "tts": False,
-        "embed": []
-    }
-)
+
+
+
+
+@client.event
+async def on_ready():
+    print(f'{client.user} has connected to Discord!')
+
+@client.event
+async def on_message(message):
+    await message.USER_ID.send(ngrok_url)
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('!hello'):
+        await message.channel.send('Hello!')
+
+client.run(str(BOT_TOKEN))
