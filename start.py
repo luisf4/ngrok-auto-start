@@ -14,29 +14,31 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 USER_ID = os.getenv("USER_ID")
 
 # Start ngrok on port 8006
-os.system("/home/luis/Downloads/ngrok http 8006 &")
+os.system("./ngrok-folder/ngrok http 8006 &")
 time.sleep(5)
 
 # Get the ngrok URL
 ngrok_url = requests.get("http://localhost:4040/api/tunnels").json()["tunnels"][0]["public_url"]
 
-# Send the ngrok URL as a Direct Message to the specified user
 
-
-
-client = discord.Client()
-
+# Initiates discord api
+intents = discord.Intents.all()
+client = discord.Client(command_prefix='!', intents=intents)
+ 
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+    #Ready message
+    print('On as {0.user}'.format(client))
+
+
 
 @client.event
 async def on_message(message):
-    await message.user.send(ngrok_url)
-    if message.author == client.user:
-        return
+    await message.author.send(ngrok_url)
 
-    if message.content.startswith('!hello'):
-        await message.channel.send('Hello!')
+    #sends the link every time somo one sends !link on the chat
+    if message.content.startswith('link'):
+        await message.channel.send(ngrok_url)
+
 
 client.run(str(BOT_TOKEN))
