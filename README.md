@@ -1,5 +1,5 @@
 # ngrok-auto-start
-How to use 
+## How to use 
 
 1. Create a discord bot on https://discord.com/developers/applications and get the token key 
 
@@ -7,9 +7,12 @@ How to use
 
 3. Place the project folder in /home 
 
-4.1 Make the start.sh executable 
-4.2 chmod +x start.sh 
+4. Make the start.sh executable 
 
-5.1 Make that it executes on boot
-5.2 crontab -e
-5.3 @reboot  /home/ngrok-auto-start/start.sh
+5. chmod +x start.sh 
+
+6. Make that it executes on boot
+
+7. crontab -e
+
+8. @reboot  /home/ngrok-auto-start/start.sh
