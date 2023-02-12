@@ -5,14 +5,33 @@
 
 2. Change the BOT_TOKEN valeu in .env file to your token that you get on step 1
 
-3. Place the project folder in /home 
+3. git clone https://github.com/luisf4/ngrok-auto-start
 
-4. Make the start.sh executable 
+4. Create a file in /etc/systemd/system/ngrok.service
 
-5. chmod +x start.sh 
+5. nano /etc/systemd/system/ngrok.service
 
-6. Make that it executes on boot
+6. add 
+[Unit]
+Description=Ngrok
+After=network.service
 
-7. crontab -e
+[Service]
+type=simple
+User=<YOUR USER HERE>
+WorkingDirectory=/root
+ExecStart=python3 /PATH/TO/start.py
+Restart=on-failure
 
-8. @reboot  /home/ngrok-auto-start/start.sh
+[Install]
+WantedBy=multi-user.target
+
+7. Save the file
+
+8. Give permition to execute the file: sudo chmod 644 /lib/systemd/system/ngrok.service
+
+9. Enable the service: sudo systemctl daemon-reload && sudo systemctl enable ngrok.service
+
+10. Added your token of ngrok to the file config.yml and move it to /root/.config/ngrok/
+
+11. Reboot the system and done!

@@ -1,0 +1,5 @@
+authtoken: YOUR TOKEN HERE
+tunnels:
+    default:
+        proto: http
+        addr: https://localhost:8006
