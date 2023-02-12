@@ -15,4 +15,4 @@
 
 7. crontab -e
 
-8. @reboot  /home/ngrok-auto-start/start.sh
+8. @reboot /root/ngrok-auto-start/start.sh
