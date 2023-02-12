@@ -32,6 +32,6 @@ WantedBy=multi-user.target
 
 9. Enable the service: sudo systemctl daemon-reload && sudo systemctl enable ngrok.service
 
-10. Adeed
+10. Added your token of ngrok to the file config.yml and move it to /root/.config/ngrok/
 
 11. Reboot the system and done!
