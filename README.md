@@ -12,6 +12,7 @@
 5. nano /etc/systemd/system/ngrok.service
 
 6. add 
+```
 [Unit]
 Description=Ngrok
 After=network.service
@@ -25,13 +26,13 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-
+```
 7. Save the file
 
 8. Give permition to execute the file: sudo chmod 644 /lib/systemd/system/ngrok.service
 
 9. Enable the service: sudo systemctl daemon-reload && sudo systemctl enable ngrok.service
 
-10. Added your token of ngrok to the file config.yml and move it to /root/.config/ngrok/
+10. Added your token of ngrok to the file config.yml and move it to /root/.config/ngrok/onfig.yml
 
 11. Reboot the system and done!
