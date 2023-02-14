@@ -10,7 +10,7 @@ load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Start ngrok on port 8006
-os.system("/ngrok-folder/ngrok start --all --config='/root/.config/ngrok/ngrok.yml'")
+os.system("/ngrok-folder/ngrok start --all --config='/root/.config/ngrok/ngrok.yml'&")
 time.sleep(5)
 
 # Get the ngrok URL
