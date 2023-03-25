@@ -1,6 +1,8 @@
-# ngrok-auto-start
-## How to use 
+# How to use 
 
+Hello! This tutorial is about setting up a Discord bot with Ngrok, a tool that allows you to expose a local server to the internet. With this setup, you can develop and test your Discord bot locally and have it interact with a live Discord server send your link or TCP url.
+
+## Configure 
 1. Create a discord bot on https://discord.com/developers/applications and get the token key 
 
 2. Go to the file start.py and change the variable 'BOT_TOKEN' to your token that you got on step 1 and change the path to the config.yml
