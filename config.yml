@@ -1,5 +1,5 @@
-authtoken: YOUR TOKEN HERE
+authtoken: YOUR NGROK TOKEN HERE - JUST PASTE IT WITH NO " "
 tunnels:
     default:
-        proto: http
-        addr: https://localhost:8006
+        proto: http # SET THE PROTOCOL HERE
+        addr: https://localhost:8006 # SET THE SERVICE PORT HERE 

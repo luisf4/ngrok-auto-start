@@ -1,16 +1,13 @@
 import os
 import requests
-import subprocess
 import time
-from dotenv import load_dotenv
 import discord
-load_dotenv()
 
-# Read the Discord bot token from the .env file
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+# Read the Discord bot token
+BOT_TOKEN = 'YOUR BOT TOKEN GOES HERE'
 
 # Start ngrok on port 8006
-os.system("/ngrok-folder/ngrok start --all --config='/root/.config/ngrok/ngrok.yml'&")
+os.system("./ngrok start --all --config='/PATH/TO/YOUR/config.yml'&")
 time.sleep(5)
 
 # Get the ngrok URL
