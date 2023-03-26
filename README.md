@@ -2,6 +2,14 @@
 
 Hello! This tutorial is about setting up a Discord bot with Ngrok, a tool that allows you to expose a local server to the internet. With this setup, you can develop and test your Discord bot locally and have it interact with a live Discord server send your link or TCP url.
 
+## Prerequisites
+
+Before we begin, make sure you have the following:
+
+- A Discord account
+- Basic knowledge of Python and how to create a Discord bot
+- Access to a terminal on your computer
+
 ## Configure 
 1. Create a discord bot on https://discord.com/developers/applications and get the token key 
 
