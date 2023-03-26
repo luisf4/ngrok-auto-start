@@ -42,8 +42,8 @@ WantedBy=multi-user.target
 ```
 7. Save the file
 
-8. Make the file executable: sudo chmod 644 /lib/systemd/system/ngrok.service
+8. Make the file executable: ``` sudo chmod 644 /lib/systemd/system/ngrok.service```
 
-9. Enable the service: sudo systemctl daemon-reload && sudo systemctl enable ngrok.service
+9. Enable the service:``` sudo systemctl daemon-reload && sudo systemctl enable ngrok.service```
 
 10. Reboot the system and the service should be started. done!!
