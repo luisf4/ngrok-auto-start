@@ -1,6 +1,7 @@
 # How to use 
 
 Hello! This tutorial is about setting up a Discord bot with Ngrok, a tool that allows you to expose a local server to the internet. With this setup, you can develop and test your Discord bot locally and have it interact with a live Discord server send your link or TCP url.
+![Snap](https://github.com/luisf4/ngrok-auto-start/assets/97737113/23b41128-928c-47f8-8bec-1855e77e6068)
 
 ## Prerequisites
 
