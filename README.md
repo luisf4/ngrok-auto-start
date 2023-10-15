@@ -23,9 +23,9 @@ Before we begin, make sure you have the following:
 
 ## Create a service
 
-5. Create a file in /etc/systemd/system/ngrok.service and ``` nano /etc/systemd/system/ngrok.service ```
+5. Move the file ``` ngrok.service ``` to ``` /etc/systemd/system/ngrok.service ``` 
 
-6. Paste into your file and modify the variables acoording  
+6. Configure variables acoording  
 ```
 [Unit]
 Description=Ngrok

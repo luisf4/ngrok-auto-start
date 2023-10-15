@@ -1,0 +1,13 @@
+[Unit]
+Description=Ngrok
+After=network.service
+
+[Service]
+type=simple
+User=<YOUR USER HERE>
+WorkingDirectory=/root
+ExecStart=python3 </PATH/TO/YOURstart.py>
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
